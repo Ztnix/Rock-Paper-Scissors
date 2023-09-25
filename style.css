@@ -1,0 +1,32 @@
+body{
+    font-family: "roboto", sans-serif;
+    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: center;   
+    background-color: #1F2937;
+    color: white;
+    padding: 32px;
+    font-size: 40px;
+}
+
+.footer{
+    background-color: rgb(40, 80, 139);
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+    color: white;
+}
+
+.mid{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #7fb1f8;
+    
+}
