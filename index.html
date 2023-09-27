@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS Simulator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script> 
 </head>
 <body>
 
@@ -14,12 +13,20 @@
     </div>
 
     <div class="mid">
-
+        <h1 id="headtext">Make a choice and play!</h1>
+        <div class="buttons">
+            <button class="gameButtons" id="rockBtn">✊</button>
+            <button class="gameButtons" id="paperBtn">✋</button>
+            <button class="gameButtons" id="scissorsBtn">✌️</button>
+         </div>
+         <button id="resetBtn">Reset Game</button>
+         <div id="score"></div>
     </div>
 
     <div class="footer">
         Copyright C The Odin Project 2021
     </div>
     
+    <script src="script.js"></script> 
 </body>
 </html>

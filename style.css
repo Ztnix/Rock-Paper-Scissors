@@ -1,8 +1,14 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
 body{
     font-family: "roboto", sans-serif;
     min-height: 100vh;  
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 
 .header{
@@ -19,14 +25,54 @@ body{
     display: flex;
     justify-content: center;
     padding: 35px;
-    color: white;
+    color: white;   
+
 }
 
 .mid{
     display: flex;
-    flex-grow: 1;
+    flex:1;
     justify-content: center;
     align-items: center;
-    background-color: #7fb1f8;
-    
+    background-color: #7fb1f8;  
+    flex-direction: column;
+    gap: 100px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 40px;
+}
+
+.gameButtons{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 60px;
+
+}
+
+#resetBtn{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1{
+
+    font-size: 50px;
+}
+
+#score{
+    font-size: 30px;
+    font-weight: 30px;
+    text-align: center;
 }
