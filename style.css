@@ -32,11 +32,10 @@ body{
 .mid{
     display: flex;
     flex:1;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #7fb1f8;  
     flex-direction: column;
-    gap: 100px;
 }
 
 .buttons{
@@ -75,4 +74,29 @@ h1{
     font-size: 30px;
     font-weight: 30px;
     text-align: center;
+}
+
+.midUpper{
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.player,.computer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#playerIcon,#computerIcon{
+    margin: 0px;
+    font-size: 100px;
+}
+
+#vs{
+    font-size: 70px;
 }

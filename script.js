@@ -12,7 +12,11 @@ let resetGame = function(){
     scissorsBtn.disabled = false;
     contCpu=0;
     contP=0;
-    score.textContent= `Player: ${contP}       Com: ${contCpu} !`
+    result.textContent="Make a choice and play!"
+    playerIcon.textContent="❓"
+    computerIcon.textContent="❓"
+    playerScore.textContent= `Player: ${contP}`
+    computerScore.textContent=`Computer: ${contCpu}`
 }
 
 let rockBtn = document.getElementById("rockBtn")
@@ -20,7 +24,10 @@ let paperBtn = document.getElementById("paperBtn")
 let scissorsBtn = document.getElementById("scissorsBtn")
 let resetBtn = document.getElementById("resetBtn")
 let result = document.getElementById("headtext")
-let scoreBoard = document.getElementById("score")
+let playerIcon = document.getElementById("playerIcon")
+let computerIcon = document.getElementById("computerIcon")
+let playerScore = document.getElementById("playerScore")
+let computerScore = document.getElementById("computerScore")
 
 rockBtn.addEventListener("click",()=> startGame("rock"));
 paperBtn.addEventListener("click",()=> startGame("paper"));
@@ -29,28 +36,58 @@ resetBtn.addEventListener("click",()=> resetGame())
 
 let startGame = function(playerChoice){
     let comChoice = getComChoice();
-    result.textContent= `Player: ${playerChoice}      Computer: ${comChoice}`
+    updateIcons(comChoice,playerChoice)
     playRound(comChoice,playerChoice);
+}
+
+let updateIcons = function(comChoice,playerChoice){  
+    switch(playerChoice){
+        case "rock":
+            playerIcon.textContent="✊"
+            break
+        case "paper":
+            playerIcon.textContent="✋"
+            break
+        case "scissors":
+            playerIcon.textContent="✌️"
+            break
+    }
+
+    switch(comChoice){
+        case "rock":
+            computerIcon.textContent="✊"
+            break
+        case "paper":
+            computerIcon.textContent="✋"
+            break
+        case "scissors":
+            computerIcon.textContent="✌️"
+            break
+    }
 }
 
 let playRound = function(comChoice,playerChoice){
        
     if (comChoice == playerChoice){
         console.log("You Tied!")
+        result.textContent="You Tied!"
     }
 
     else if (playerChoice == "rock" && comChoice == "scissors" ||
              playerChoice == "scissors" && comChoice == "paper"||
              playerChoice == "paper" && comChoice == "rock"){
                 console.log("You Won!")
+                result.textContent="You Won!"
                 contP++
              }
     else{
         console.log("You Lost!")
+        result.textContent="You Lost!"
         contCpu++
     }    
 
-    score.textContent= `       Player: ${contP}              Computer: ${contCpu}`
+    playerScore.textContent= `Player: ${contP}`
+    computerScore.textContent=`Computer: ${contCpu}`
 
 if (contP ==5){
     alert("You Won The Game!")
